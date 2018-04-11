@@ -1,0 +1,560 @@
+/* Fonts */
+
+@font-face {
+    font-family: "Yeseva One";
+    src: url("../fonts/yeseva_one.woff2") format("woff2");
+    font-weight: 400;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "Gentium Book Basic";
+    src: url("../fonts/gentium_book_basic_bold.woff2") format("woff2");
+    font-weight: 700;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "Lato";
+    src: url("../fonts/lato_regular.woff2") format("woff2");
+    font-weight: 400;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "Open Sans";
+    src: url("../fonts/open_sans_regular.woff2") format("woff2");
+    font-weight: 400;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "Open Sans";
+    src: url("../fonts/open_sans_italic.woff2") format("woff2");
+    font-weight: 400;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: "Open Sans";
+    src: url("../fonts/open_sans_bold.woff2") format("woff2");
+    font-weight: 700;
+    font-style: normal;
+}
+
+/* Reset User Agent Styles */
+
+* {
+    padding: 0;
+    margin: 0;
+}
+
+legend {
+    display: table;
+    padding: 0;
+}
+
+fieldset {
+    min-width: 0;
+    padding: 0.01em 0 0 0;
+    border: 0;
+    margin: 0;
+}
+
+body:not(:-moz-handler-blocked) fieldset {
+    display: table-cell;
+}
+
+input:focus, select:focus {
+    outline: none;
+}
+
+input[type="date"]::-webkit-inner-spin-button,
+input[type="date"]::-webkit-calendar-picker-indicator,
+input[type="date"]::-webkit-clear-button {
+    display: none;
+    -webkit-appearance: none;
+}
+
+select {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+}
+
+/* Heads */
+
+h1 {
+    padding-top: 210px;
+    font-family: "Yeseva One", serif;
+    font-size: 90px;
+    font-weight: 100;
+    line-height: 1.35;
+    color: rgb(255, 255, 255);
+}
+
+h2 {
+    font-family: "Yeseva One", serif;
+    font-size: 36px;
+    font-weight: 100;
+}
+
+h3 {
+    font-family: "Yeseva One", serif;
+    font-size: 21px;
+    font-weight: 100;
+    color: rgb(204, 153, 0);
+}
+
+/* Text */
+
+.weight-bold {
+    font-weight: 700;
+}
+
+.color-orange {
+    color: rgb(204, 153, 0);
+}
+
+.color-white {
+    color: rgb(255, 255, 255);
+}
+
+/* Dividers */
+
+.divider-h1:after {
+    content: "";
+    display: block;
+    height: 43px;
+    margin: 20px 0 37px 0;
+    background: url("../images/divider_h1.png") 50% 50% no-repeat;
+}
+
+.divider-h2-orange:after {
+    content: "";
+    display: block;
+    height: 43px;
+    margin-bottom: 15px;
+    background: url("../images/divider_h2_orange.png") 50% 50% no-repeat;
+}
+
+.divider-h2-white:after {
+    content: "";
+    display: block;
+    height: 43px;
+    margin-bottom: 15px;
+    background: url("../images/divider_h2_white.png") 50% 50% no-repeat;
+}
+
+.divider-h3-white:after {
+    content: "";
+    display: block;
+    height: 43px;
+    margin-bottom: 5px;
+    background: url("../images/divider_h3_white.png") 50% 50% no-repeat;
+}
+
+/* Other */
+
+.background-gradient {
+    background: -webkit-linear-gradient(to bottom right, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.05), rgba(0, 0, 0, 0.1));
+    background: -moz-linear-gradient(to bottom right, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.05), rgba(0, 0, 0, 0.1));
+    background: -o-linear-gradient(to bottom right, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.05), rgba(0, 0, 0, 0.1));
+    background: linear-gradient(to bottom right, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.05), rgba(0, 0, 0, 0.1));
+}
+
+.space-after-10 {
+    margin-bottom: 10px;
+}
+
+/* Body */
+
+body {
+    background-image: url("../images/pattern_circular.png");
+    font-family: "Lato", sans-serif;
+    font-size: 16px;
+    line-height: 1.5;
+    color: rgb(76, 76, 76);
+}
+
+.body-wrapper {
+    width: 1600px;
+    margin: 0 auto;
+}
+
+.main {
+    min-height: calc(100vh - 320px);
+}
+
+a {
+    text-decoration: none;
+}
+
+a:visited {
+    color: rgb(255, 255, 255);
+}
+
+/* Header */
+
+.header {
+    display: grid;
+    grid-template: 1fr / 520px 820px 1fr;
+    justify-items: center;
+    align-items: end;
+    position: absolute;
+}
+
+.header a{
+    display: inline-block;
+    font-family: "Gentium Book Basic", serif;
+    font-size: 21px;
+}
+
+.header nav a {
+    padding: 45px 25px 0 25px;
+    color: rgb(255, 255, 255);
+}
+
+.header nav a:hover {
+    padding: 42px 25px 0 25px;
+    border-top: 3px solid rgba(255, 255, 255, 0.9);
+}
+
+.header .social-networks a {
+    padding: 45px 10px 0 10px;
+    color: rgb(204, 153, 0);
+}
+
+.header .social-networks a:visited {
+    color: rgb(204, 153, 0);
+}
+
+/* Banner Section */
+
+.banner {
+    height: 750px;
+    background: url("../images/background_macaroni.jpg");
+    text-align: center;
+    overflow: auto;
+}
+
+.banner-buttons .button {
+    display: inline-block;
+    padding: 14px 50px;
+    margin: 0 15px;
+    font-size: 18px;
+    text-transform: uppercase;
+    color: rgb(255, 255, 255);
+}
+
+.banner-buttons .button-primary {
+    border: 1px solid rgb(0, 0, 0);
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.banner-buttons .button-primary:hover {
+    border: 1px solid rgba(0, 0, 0, 0);
+    background-color: rgba(255, 255, 255, 0.2);
+}
+
+.banner-buttons .button-secondary {
+    border: 1px solid rgb(255, 255, 255);
+    background-color: rgba(255, 255, 255, 0.2);
+}
+
+.banner-buttons .button-secondary:hover {
+    border: 1px solid rgba(255, 255, 255, 0);
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+/* About Section */
+
+.about {
+    height: 710px;
+    display: grid;
+    grid-template: 1fr / 500px 600px;
+    justify-items: center;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    overflow: auto;
+}
+
+.about-content {
+    width: 440px;
+    margin-top: -10px;
+}
+
+.about-content img {
+    margin: 53px 0 0 70px;
+}
+
+.about-image {
+    width: 621px;
+}
+
+/* Food Section */
+
+.food {
+    height: 758px;
+    display: grid;
+    grid-template: 1fr / 1fr;
+    justify-items: center;
+    align-items: center;
+    background: url("../images/background_spinach.jpg");
+    text-align: center;
+}
+
+.food-content {
+    width: 440px;
+    height: 420px;
+    padding: 68px 65px;
+    margin-left: 37.5%;
+    background-color: rgba(0, 0 ,0, 0.5);
+    overflow: auto;
+}
+
+.food-images {
+    margin-top: 72px;
+}
+
+.food-images img {
+    width: 100px;
+    height: 100px;
+    border: 4px solid rgba(255, 255, 255, 0.1);
+    border-radius: 50%;
+    margin: 0 15px;
+}
+
+/* Menu Section */
+
+.menu {
+    display: grid;
+    grid-template: 1fr / 450px 450px;
+    justify-content: center;
+    grid-column-gap: 150px;
+    background: linear-gradient(to top left, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.05), rgba(0, 0, 0, 0.1)), url("../images/pattern_hexagonal.png");
+}
+
+.menu section {
+    width: 450px;
+    margin-top: 95px;
+    margin-bottom: 40px;
+}
+
+.menu article {
+    margin-bottom: 50px;
+}
+
+.menu ul, .menu li {
+    list-style-type: none;
+}
+
+.menu li {
+    margin-top: -7px;
+    margin-bottom: 31px;
+    padding: 0 10px;
+}
+
+.menu div {
+    padding: 5px 0;
+    border-bottom: 1px solid rgba(204, 153, 0, 0.5);
+}
+
+.menu h2 {
+    text-align: center;
+}
+
+.menu-name {
+    float: left;
+}
+
+.menu-price {
+    text-align: right;
+}
+
+.menu p {
+    padding: 5px 0;
+}
+
+.menu-special {
+    border: 1px solid rgba(204, 153, 0, 0.5);
+}
+
+.menu-special:before {
+    content: "Special";
+    position: relative;
+    float: right;
+    top: -23px;
+    left: 11px;
+    padding: 1px 10px;
+    margin-left: -70px;
+    background: rgb(211, 180, 92);
+    font-size: 14px;
+    color: rgb(255, 255, 255);
+}
+
+/* Reviews Section */
+
+.reviews {
+    height: 758px;
+    display: grid;
+    grid-template: 1fr / 1fr;
+    justify-items: center;
+    align-items: center;
+    background: url("../images/background_kebab.jpg");
+    text-align: center;
+}
+
+.reviews-content {
+    width: 640px;
+    height: 425px;
+    padding: 65px 65px;
+    background-color: rgba(0, 0 ,0, 0.7);
+    overflow: auto;
+}
+
+.quote {
+    position: relative;
+    margin-bottom: 30px;
+    font-family: "Gentium Book Basic", serif;
+    font-size: 25px;
+    line-height: 1.8;
+}
+
+.quote:before {
+    content: "\201C";
+    position: absolute;
+    top: -50px;
+    left: -35px;
+    font-family: Georgia, serif;
+    font-size: 90px;
+    color: rgba(255, 255, 255, 0.5);
+}
+
+/* Booking Section */
+
+.booking {
+    height: 710px;
+    display: grid;
+    grid-template: 1fr / 1fr 1fr;
+    justify-items: end;
+    align-items: center;
+    text-align: center;
+    overflow: auto;
+}
+
+.booking-images img {
+    margin: 0 15px;
+}
+
+.booking-content {
+    width: 430px;
+    margin-top: 20px;
+    margin-right: 285px;
+}
+
+.booking-form {
+    display: grid;
+    grid-template: 1fr 0.5fr / 1fr 1fr;
+    justify-items: center;
+    align-items: center;
+    grid-column-gap: 30px;
+    margin-top: 38px;
+    text-align: left;
+}
+
+.booking-form label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+    color: rgb(204, 153, 0);
+}
+
+.booking-form input, .booking-form select {
+    box-sizing: border-box;
+    width: 12.5rem;
+    height: 2.5rem;
+    padding-left: 12px;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    margin-bottom: 15px;
+    background: rgba(255, 255, 255, 0.7);
+    font-style: italic;
+    color: rgb(124, 124, 124);
+}
+
+.booking-form input:focus, .booking-form select:focus {
+    outline: 1px solid rgb(204, 153, 0);
+}
+
+.booking-form input[name="date"] {
+    background: rgba(255, 255, 255, 0.7) url("../images/icon_calendar.png") 93% no-repeat;
+}
+
+.booking-form select {
+    background: rgba(255, 255, 255, 0.7) url("../images/icon_arrow.png") 93% no-repeat;
+}
+
+.booking-form-button {
+    grid-column: 1 / span 2;
+}
+
+.booking-form-button input[type="submit"] {
+    width: 200px;
+    padding-left: 0;
+    border: none;
+    background: rgb(204, 153, 0);
+    cursor: pointer;
+    font-style: normal;
+    color: rgb(255, 255, 255);
+}
+
+.booking-form-button input[type="submit"]:hover {
+    background: rgb(211, 180, 92);
+}
+
+/* Footer */
+
+.footer {
+    height: 320px;
+    display: grid;
+    grid-template: 1fr / 25% 25% 25%;
+    justify-content: center;
+    background: rgb(25, 25, 25);
+    font-family: "Open Sans", sans-serif;
+    text-align: center;
+    overflow: auto;
+}
+
+.footer > div {
+    margin-top: 55px;
+}
+
+.footer .payment-methods, .footer .social-networks {
+    margin-top: 47.5px;
+}
+
+.footer .payment-methods a, .footer .social-networks a {
+    padding: 0 7.5px;
+    color: rgb(255, 255, 255);
+}
+
+.footer .payment-methods a:visited, .footer .social-networks a:visited {
+    color: rgb(255, 255, 255);
+}
+
+.footer sup {
+    font-size: 8px;
+    text-transform: uppercase;
+}
+
+/*
+input[type="date"]::before {
+    content: attr(data-placeholder);
+    width: 100%;
+}
+
+input[type="date"]:focus::before,
+input[type="date"]:valid::before {
+    display: none;
+}
+*/
